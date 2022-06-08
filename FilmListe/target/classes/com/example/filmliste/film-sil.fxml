@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="630.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.filmliste.Controllers.FilmSilController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <top>
+        <AnchorPane prefHeight="22.0" prefWidth="602.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="-5.0" prefHeight="59.0" prefWidth="602.0" text="Film Listele - FİLM SİL" textAlignment="CENTER" textFill="#bf0707">
+                    <font>
+                        <Font name="Impact" size="27.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </top>
+    <left>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <Pane prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <VBox prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="İŞLEMLER" textFill="#bf0811">
+                                    <font>
+                                        <Font name="Calibri" size="19.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="filmEkleButton" mnemonicParsing="false" onAction="#filmEkleSayfaCagir" prefHeight="30.0" prefWidth="100.0" text="Film Ekle">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Film Sil">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </VBox>
+                    </children>
+                </Pane>
+                <Pane prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <VBox prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="LİSTELER" textFill="#bf0811">
+                                    <font>
+                                        <Font name="Calibri" size="19.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="izlediklerimButton" mnemonicParsing="false" onAction="#izlediklerimListeCagir" prefHeight="30.0" prefWidth="100.0" text="İzlediklerim">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="izleyeceklerimButton" mnemonicParsing="false" onAction="#izleyeceklerimListeCagir" prefHeight="30.0" prefWidth="100.0" text="İzleyeceklerim">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </VBox>
+                    </children>
+                </Pane>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="170.0" layoutY="152.0" prefHeight="32.0" prefWidth="178.0" text="Filmin ismini giriniz:">
+                    <font>
+                        <Font name="Franklin Gothic Medium" size="20.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="filmSilText" layoutX="111.0" layoutY="184.0" prefHeight="26.0" prefWidth="298.0" />
+                <Button fx:id="sil" layoutX="197.0" layoutY="248.0" mnemonicParsing="false" onAction="#filmSil" prefHeight="40.0" prefWidth="125.0" text="SİL">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <MenuButton fx:id="listelerMenu" layoutX="278.0" layoutY="108.0" mnemonicParsing="false" text="Listeler">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="İzlediklerim" />
+                        <MenuItem mnemonicParsing="false" text="İzleyeceklerim" />
+                    </items>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </MenuButton>
+                <Label layoutX="144.0" layoutY="109.0" text="Bir Liste Seçiniz:">
+                    <font>
+                        <Font name="Franklin Gothic Medium Cond" size="19.0" />
+                    </font>
+                </Label>
+            <Label fx:id="message" layoutX="257.0" layoutY="323.0" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
